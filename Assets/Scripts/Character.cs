@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    int hp;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    float moveSpeed = 0f;
+    float rotateSpeed = 0f;
+    float gravity = 0f;
+    
 }
