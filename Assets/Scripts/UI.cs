@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    Text healthText;
+   public Text healthText;
+    public Text AmmoText;
 
     private void Start()
     {
-        healthText = GetComponent<Text>();
+        healthText.text = "100";
+        AmmoText.text = "50";
     }
 
 
