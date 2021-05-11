@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : Character
 {
+
+    Rigidbody rigidbody;
+
+    public float force = 100.0f;
+
     public void Awake()
     {
         hp = 100;
@@ -12,6 +17,16 @@ public class Player : Character
         jumpPower = 10.0f;
         gravity = 9.8f;
         playerGravity = 0;
+
+        rigidbody = GetComponent<Rigidbody>();
+
+    }
+    private void FixedUpdate()
+    {
+        if(Input.GetButtonDown("Jump"))
+        {
+            rigidbody.AddForce(new Vector3(0, 1.0f, 0) * force);
+        }
     }
 
     void Update()
