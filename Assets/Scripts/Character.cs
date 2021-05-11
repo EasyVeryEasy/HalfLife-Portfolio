@@ -6,10 +6,7 @@ public class Character : MonoBehaviour
 {
     protected int hp;
     protected float moveSpeed;
-    protected float backmoveSpeed;
     protected float jumpPower;
     protected float gravity;
-    protected float playerGravity;
-    
 
 }

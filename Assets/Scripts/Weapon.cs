@@ -9,6 +9,10 @@ public class Weapon : MonoBehaviour
 
     private Animator anim;
 
+    
+    [SerializeField] AudioClip pistolSound;
+    [SerializeField] AudioSource pistol;
+
     public string weaponName;
     public int bulletsPerMag;       // 탄창 당 장탄 수
     public int bulletsTotal;        // 전체 가지고 있는 총탄 수
@@ -31,8 +35,10 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
+            pistol.PlayOneShot(pistolSound);
+
             if (currentBullets > 0)
             {
                 Fire();
