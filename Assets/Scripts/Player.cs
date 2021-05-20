@@ -35,7 +35,11 @@ public class Player : Character
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * moveSpeed * Time.deltaTime * horizontal, Space.Self);
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * vertical, Space.Self);
+        //transform.Translate(Vector3.right * moveSpeed * Time.deltaTime * horizontal, Space.Self);
+        //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * vertical, Space.Self);
+
+        Vector3 velocity = transform.TransformDirection(new Vector3(horizontal, 0f, vertical)) * moveSpeed;
+        velocity.y = 0f;
+        rigidbody.velocity = velocity;
     }
 }

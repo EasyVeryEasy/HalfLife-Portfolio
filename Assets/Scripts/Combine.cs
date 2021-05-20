@@ -7,6 +7,10 @@ public class Combine : Character
     public void Awake()
     {
         hp = 50;
-        //moveSpeed = 5.5f;
+        
     }
+
+    
+    
+
 }

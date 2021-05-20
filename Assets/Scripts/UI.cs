@@ -17,7 +17,8 @@ public class UI : MonoBehaviour
 
     private void Update()
     {
-        
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 }
